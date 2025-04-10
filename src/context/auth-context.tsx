@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { AuthContextType } from "./interfaces/auth-context.interface";
-import { LoginData } from "@/core/interfaces/auth.interface";
+import { LoginData, RegisterData } from "@/core/interfaces/auth.interface";
 import { useApi } from "@/hooks/http/useApi";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const checkAuthStatus = async () => {
     try {
-      await api.get("/auth/user"); 
+      await api.get("/auth/user");
       setIsAuthenticated(true);
     } catch (error) {
       setIsAuthenticated(false);
@@ -31,6 +31,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  const register = async (data: RegisterData) => {
+    try {
+      const { name, email, password } = data;
+      await api.post("/auth/register", {
+        name,
+        email,
+        password,
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
+
   const logout = async () => {
     try {
       await api.post("/auth/logout");
@@ -41,7 +54,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout, register }}>
       {children}
     </AuthContext.Provider>
   );

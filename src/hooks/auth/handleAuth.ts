@@ -4,7 +4,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
 export const handleAuth = () => {
-  const { login, logout } = useAuth();
+  const { login, logout, register } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -39,17 +39,13 @@ export const handleAuth = () => {
     setError(null);
 
     try {
-      //TODO: Implementar a lógica de registro com requisição HTTP
-      console.log("Tentando fazer registro...", data);
+      await register(data);
 
-      setTimeout(() => {
-        console.log("Registro bem-sucedido", data);
-        navigate({ to: "/" });
-      }, 1000);
-
-      setLoading(false);
+      navigate({ to: "/" });
     } catch (err) {
       setError("Erro ao fazer registro.");
+    } finally {
+      setLoading(false);
     }
   };
 
