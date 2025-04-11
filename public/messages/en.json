@@ -1,0 +1,36 @@
+{
+  "language": {
+    "en": "English",
+    "pt": "Portuguese"
+  },
+  "sign-in": {
+    "create": "Create account",
+    "email": "E-mail",
+    "password": "Password",
+    "forgot_password": "Forgot password?",
+    "login": "Login",
+    "register": "Register",
+    "no_account": "Don't have an account?",
+    "github": "Login with Github",
+    "google": "Login with Google",
+    "terms_advice": "By clicking continue, you agree to our",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "or_continue_with": "Or continue with",
+    "call_to_action": "Register to start using KeyHaven",
+    "and": "and",
+    "loading": "Loading..."
+  },
+  "sign-up": {
+    "create_account": "Create an account",
+    "description": "Sign up to start using KeyHaven",
+    "confirm_password": "Confirm Password",
+    "already_have_account": "Already have an account?",
+    "signup_advice": "By clicking continue, you agree to our",
+    "name": "Name",
+    "github": "Sign up with Github",
+    "google": "Sign up with Google",
+    "signin": "Sign in",
+    "mismatch": "Passwords do not match"
+  }
+}
