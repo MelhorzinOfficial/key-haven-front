@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/core/constants/base-url.constant";
+import { API_BASE_URL } from "@/core/constants/base-url.constant";
 import axios from "axios";
 import { useMemo } from "react";
 
@@ -10,7 +10,7 @@ export const useApi = () => {
 
   const axiosInstance = useMemo(() => {
     const instance = axios.create({
-      baseURL: BASE_URL,
+      baseURL: API_BASE_URL,
       withCredentials: true,
     });
 
