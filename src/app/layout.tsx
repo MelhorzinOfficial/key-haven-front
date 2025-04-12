@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
         <QueryClientProvider client={queryClient}>
-          <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-left" />
+          <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
             <I18nProvider>{children}</I18nProvider>
           </ThemeProvider>
