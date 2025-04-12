@@ -8,7 +8,7 @@ export interface LoginRequest {
   password: string;
 }
 
-interface LoginResponse {
+export interface LoginResponse {
   user: {
     id: string;
     name: string;
@@ -22,7 +22,7 @@ export async function Login(data: LoginRequest): Promise<LoginResponse> {
     .post<LoginResponse>("auth/login", {
       json: data,
     })
-    .json<LoginResponse>();
+    .json();
 }
 
 export const useLogin = () => {
