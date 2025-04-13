@@ -3,31 +3,27 @@ import { queryClient } from "@/lib/query";
 import { queryKeys } from "@/lib/query-keys";
 import { useMutation } from "@tanstack/react-query";
 
-export interface LoginRequest {
+export interface SignUpRequest {
   email: string;
+  name: string;
   password: string;
 }
 
-export interface LoginResponse {
-  user: {
-    id: string;
-    name: string;
-  };
-  token: string;
-  expiresIn: number;
+export interface SignUpResponse {
+  data: null;
 }
 
-export async function Login(data: LoginRequest): Promise<LoginResponse> {
+export async function SignUp(data: SignUpRequest): Promise<SignUpResponse> {
   return await api
-    .post<LoginResponse>("auth/login", {
+    .post<SignUpResponse>("auth/register", {
       json: data,
     })
     .json();
 }
 
-export const useLogin = () => {
+export const useSignUp = () => {
   return useMutation({
-    mutationFn: Login,
+    mutationFn: SignUp,
     onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.auth() }),
   });
 };
