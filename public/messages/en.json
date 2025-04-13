@@ -19,7 +19,9 @@
     "or_continue_with": "Or continue with",
     "call_to_action": "Register to start using KeyHaven",
     "and": "and",
-    "loading": "Loading..."
+    "confirm_password":"Confirm Password",
+    "loading": "Loading...",
+    "generic_error": "An error occurred. Please try again later."
   },
   "sign-up": {
     "create_account": "Create an account",
@@ -31,6 +33,16 @@
     "github": "Sign up with Github",
     "google": "Sign up with Google",
     "signin": "Sign in",
-    "mismatch": "Passwords do not match"
+    "mismatch": "Passwords do not match",
+    "email": "E-mail",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "or_continue_with": "Ou continuar com",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "and": "and",
+    "terms_advice": "By clicking continue, you agree to our",
+    "loading": "Loading..."
   }
 }

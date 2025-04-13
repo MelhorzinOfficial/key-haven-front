@@ -8,7 +8,6 @@ export interface SignUpRequest {
   name: string;
   password: string;
 }
-
 export interface SignUpResponse {
   data: null;
 }
@@ -24,6 +23,7 @@ export async function SignUp(data: SignUpRequest): Promise<SignUpResponse> {
 export const useSignUp = () => {
   return useMutation({
     mutationFn: SignUp,
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.auth() }),
+    onSuccess: () =>
+      queryClient.invalidateQueries({ queryKey: queryKeys.auth() }),
   });
 };
