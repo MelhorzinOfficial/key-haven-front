@@ -34,7 +34,7 @@ export function NavUser() {
   const handleLogout = () => {
     logout(undefined, {
       onSuccess: () => {
-        router.push("/sign-in");
+        router.push("/");
       },
     });
   };
