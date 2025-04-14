@@ -11,7 +11,7 @@ import { useGetMe, User } from "@/http/auth/getMe";
 export function NavUser() {
   const { isMobile } = useSidebar();
   const router = useRouter();
-  const { data, isLoading, isError } = useGetMe();
+  const { data } = useGetMe();
   const { mutate: logout, isPending: isLoggingOut } = useLogout();
 
   // Extract the user data
