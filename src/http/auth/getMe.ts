@@ -1,5 +1,4 @@
 import { api } from "@/lib/api";
-import { queryClient } from "@/lib/query";
 import { queryKeys } from "@/lib/query-keys";
 import { useQuery } from "@tanstack/react-query";
 
