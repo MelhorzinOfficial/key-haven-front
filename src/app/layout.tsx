@@ -8,6 +8,13 @@ import { queryClient } from "@/lib/query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { I18nProvider } from "@/components/provider/i18n";
 
+/**
+ * Provides the root layout for the application, setting up global providers for theming, internationalization, and data fetching.
+ *
+ * @param children - The content to be rendered within the layout.
+ *
+ * @remark Disables the default browser context menu throughout the application.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -5,6 +5,11 @@ import * as ProgressPrimitive from "@radix-ui/react-progress"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Renders a customizable progress bar that visually indicates completion percentage.
+ *
+ * @param value - The current progress value as a percentage (0–100). If omitted or zero, the indicator is hidden.
+ */
 function Progress({
   className,
   value,

@@ -3,6 +3,13 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 import { Separator } from "@/components/ui/separator";
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
 
+/**
+ * Provides the main application layout with a sidebar, header, breadcrumb navigation, and content area.
+ *
+ * Wraps child components with sidebar context and displays a responsive header containing navigation breadcrumbs.
+ *
+ * @param children - The content to be rendered within the layout.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -14,6 +14,16 @@ interface LanguageSwitcherProps {
   className?: string;
 }
 
+/**
+ * Renders a language selection dropdown menu with animated UI, allowing users to switch the application's language.
+ *
+ * The selected language is persisted in localStorage and synchronized across browser tabs. Changing the language reloads the page to apply the new locale.
+ *
+ * @param variant - Determines the button style and layout, either "header" or "sidebar".
+ * @param className - Optional additional CSS classes for custom styling.
+ *
+ * @remark The component reloads the page after a language change to ensure the new locale is fully applied.
+ */
 export default function LanguageSwitcher({ variant = "header", className }: LanguageSwitcherProps) {
   const t = useTranslations();
   const [locale, setLocale] = useState(() => {

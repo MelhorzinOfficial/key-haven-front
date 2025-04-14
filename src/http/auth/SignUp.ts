@@ -12,6 +12,12 @@ export interface SignUpResponse {
   data: null;
 }
 
+/**
+ * Registers a new user by sending their sign-up information to the authentication API.
+ *
+ * @param data - The user's sign-up details, including email, name, and password.
+ * @returns The API response indicating the result of the registration.
+ */
 export async function SignUp(data: SignUpRequest): Promise<SignUpResponse> {
   return await api
     .post<SignUpResponse>("auth/register", {

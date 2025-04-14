@@ -5,6 +5,17 @@ import * as SliderPrimitive from "@radix-ui/react-slider"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Renders a customizable slider component supporting single or multiple thumbs.
+ *
+ * The slider adapts to horizontal or vertical orientation and allows for custom styling and configuration. Multiple thumbs are rendered if the `value` or `defaultValue` props are arrays.
+ *
+ * @param className - Additional CSS classes to apply to the slider root element.
+ * @param defaultValue - The initial value(s) of the slider if uncontrolled.
+ * @param value - The controlled value(s) of the slider.
+ * @param min - The minimum allowed value. Defaults to 0.
+ * @param max - The maximum allowed value. Defaults to 100.
+ */
 function Slider({
   className,
   defaultValue,

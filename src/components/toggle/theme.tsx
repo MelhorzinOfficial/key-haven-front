@@ -7,6 +7,11 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
+/**
+ * Renders a dropdown menu for switching between light, dark, and system themes.
+ *
+ * Provides a button that visually indicates the current theme and allows users to select their preferred theme mode.
+ */
 export function ToggleTheme() {
   const { setTheme } = useTheme();
 

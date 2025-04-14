@@ -15,6 +15,11 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+/**
+ * Renders the header section of a card with grid layout and responsive styling.
+ *
+ * Applies container queries and adjusts grid columns if a card action is present.
+ */
 function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div

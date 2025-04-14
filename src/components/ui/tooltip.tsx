@@ -5,6 +5,11 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Provides context for tooltip components, controlling global tooltip behavior such as delay duration.
+ *
+ * @param delayDuration - Time in milliseconds before the tooltip appears after a trigger event. Defaults to 0.
+ */
 function TooltipProvider({
   delayDuration = 0,
   ...props
@@ -18,6 +23,11 @@ function TooltipProvider({
   )
 }
 
+/**
+ * Provides a tooltip context and renders a tooltip root element.
+ *
+ * Wraps the tooltip root in a provider to ensure consistent tooltip behavior and context.
+ */
 function Tooltip({
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Root>) {
@@ -28,12 +38,24 @@ function Tooltip({
   )
 }
 
+/**
+ * Renders an element that acts as the trigger for displaying the tooltip.
+ *
+ * Pass any valid trigger element and props to control tooltip activation.
+ */
 function TooltipTrigger({
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
   return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />
 }
 
+/**
+ * Renders the content of a tooltip inside a portal with customizable styling and positioning.
+ *
+ * @param className - Additional CSS classes to apply to the tooltip content.
+ * @param sideOffset - Distance in pixels between the tooltip and its trigger element. Defaults to 0.
+ * @param children - Elements to display inside the tooltip.
+ */
 function TooltipContent({
   className,
   sideOffset = 0,

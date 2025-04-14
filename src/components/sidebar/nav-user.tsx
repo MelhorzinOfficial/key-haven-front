@@ -8,6 +8,12 @@ import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@/c
 import { useLogout } from "@/http/auth/logout";
 import { useGetMe, User } from "@/http/auth/getMe";
 
+/**
+ * Renders a user navigation menu within the sidebar, displaying the user's profile information and providing account-related actions such as upgrading, accessing account settings, and logging out.
+ *
+ * @remark
+ * If user data is unavailable, a guest profile is shown. Logging out redirects the user to the home page.
+ */
 export function NavUser() {
   const { isMobile } = useSidebar();
   const router = useRouter();

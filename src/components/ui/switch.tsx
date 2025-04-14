@@ -5,6 +5,11 @@ import * as SwitchPrimitive from "@radix-ui/react-switch"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Renders a customizable toggle switch component using Radix UI primitives.
+ *
+ * Accepts all props supported by `SwitchPrimitive.Root`, allowing for integration with forms and accessibility features. The switch visually indicates its checked state and supports custom styling via the `className` prop.
+ */
 function Switch({
   className,
   ...props

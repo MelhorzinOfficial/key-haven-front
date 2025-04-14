@@ -1,6 +1,13 @@
 import { DropdownMenu, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
 
+/**
+ * Renders the sidebar header with a dropdown menu trigger labeled "KeyHaven".
+ *
+ * @returns The sidebar header component containing a dropdown menu trigger.
+ *
+ * @remark The heading is intended to be concatenated with the project logo in a future update.
+ */
 export function HeaderSidebar() {
   return (
     <SidebarMenu>

@@ -24,6 +24,11 @@ const signinSchema = z.object({
 
 type SigninForm = z.infer<typeof signinSchema>;
 
+/**
+ * Renders a user sign-in form with validation, error handling, and options for third-party authentication.
+ *
+ * The form validates email and password fields, displays relevant error messages, and provides UI feedback during submission. On successful sign-in, the user is redirected to the dashboard. Includes links for password recovery, registration, and terms of service, as well as buttons for signing in with GitHub or Google.
+ */
 export function SignInForm({
   className,
   ...props

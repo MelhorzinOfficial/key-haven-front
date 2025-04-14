@@ -6,30 +6,53 @@ import { XIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Serves as the root container for a dialog, providing context and state management for all dialog components.
+ */
 function Dialog({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Root>) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />
 }
 
+/**
+ * Renders an element that opens the dialog when interacted with.
+ *
+ * Wraps the Radix UI Dialog Trigger and adds a `data-slot="dialog-trigger"` attribute for targeting or styling.
+ */
 function DialogTrigger({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
 }
 
+/**
+ * Renders dialog content in a React portal, allowing it to be mounted outside the DOM hierarchy of the parent component.
+ *
+ * Adds a `data-slot="dialog-portal"` attribute for targeting or testing.
+ */
 function DialogPortal({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Portal>) {
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />
 }
 
+/**
+ * Renders a button or element that closes the dialog when activated.
+ *
+ * Forwards all props to the underlying dialog close primitive and adds a `data-slot="dialog-close"` attribute for targeting or styling.
+ */
 function DialogClose({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Close>) {
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />
 }
 
+/**
+ * Renders a semi-transparent overlay behind the dialog, covering the entire viewport and applying open/close animations.
+ *
+ * @remark The overlay uses animation classes that respond to the dialog's state for smooth transitions.
+ */
 function DialogOverlay({
   className,
   ...props
@@ -46,6 +69,14 @@ function DialogOverlay({
   )
 }
 
+/**
+ * Renders the main content area of the dialog, including overlay, content container, and a close button.
+ *
+ * The content is centered on the screen with responsive width, animated transitions, and includes a close button in the top-right corner for accessibility.
+ *
+ * @param className - Additional class names to apply to the content container.
+ * @param children - Elements to render inside the dialog content area.
+ */
 function DialogContent({
   className,
   children,
@@ -72,6 +103,11 @@ function DialogContent({
   )
 }
 
+/**
+ * Renders the header section of a dialog with vertical layout and responsive text alignment.
+ *
+ * Use this component to group the title and description or other header content within a dialog.
+ */
 function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -82,6 +118,11 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+/**
+ * Renders the footer section of a dialog with responsive layout for action buttons or controls.
+ *
+ * The footer stacks its children in reverse column order on small screens and switches to a right-aligned row layout on larger screens.
+ */
 function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -95,6 +136,11 @@ function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+/**
+ * Renders the dialog's title with appropriate styling and a data attribute for targeting.
+ *
+ * @param className - Additional class names to apply to the title element.
+ */
 function DialogTitle({
   className,
   ...props
@@ -108,6 +154,11 @@ function DialogTitle({
   )
 }
 
+/**
+ * Renders descriptive text within a dialog, styled with muted color and smaller font size.
+ *
+ * @remark Adds a `data-slot="dialog-description"` attribute for targeting and merges additional class names.
+ */
 function DialogDescription({
   className,
   ...props

@@ -19,6 +19,14 @@ export interface SignInResponse {
   expiresIn: number;
 }
 
+/**
+ * Authenticates a user by sending sign-in credentials and returns user and token information.
+ *
+ * If authentication is successful and a token is received, the token is stored in a cookie with an expiration based on the token's validity period.
+ *
+ * @param data - The user's sign-in credentials.
+ * @returns The authenticated user's details, token, and token expiration duration.
+ */
 export async function SignIn(data: SignInRequest): Promise<SignInResponse> {
   const response = await api
     .post<SignInResponse>("auth/login", {

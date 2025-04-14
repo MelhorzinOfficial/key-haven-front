@@ -10,6 +10,13 @@ export const languages = [
   { code: "pt", name: "Português", flag: "🇧🇷" },
 ];
 
+/**
+ * Provides internationalization context and translated messages to React components.
+ *
+ * Initializes the locale from `localStorage` or defaults to English, loads translation messages dynamically, and updates the locale in response to changes in `localStorage`. Displays a loading spinner while messages are being fetched.
+ *
+ * @param children - The React components that will receive internationalization context.
+ */
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState(() => {
     if (typeof window !== "undefined") {

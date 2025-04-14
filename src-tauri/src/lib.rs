@@ -1,4 +1,14 @@
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
+/// Initializes and runs the Tauri application, enabling logging in debug mode.
+///
+/// In debug builds, attaches a logging plugin to the application that logs messages at the `Info` level. Panics if the application fails to start.
+///
+/// # Examples
+///
+/// ```
+/// // Starts the Tauri application. Typically called from main().
+/// run();
+/// ```
 pub fn run() {
   tauri::Builder::default()
     .setup(|app| {

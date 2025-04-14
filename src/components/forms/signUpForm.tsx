@@ -37,6 +37,13 @@ const signupSchema = z
 
 type SignupForm = z.infer<typeof signupSchema>;
 
+/**
+ * Renders a user registration form with validation, password visibility toggles, and alternative sign-up options.
+ *
+ * The form collects name, email, password, and password confirmation, enforcing validation rules and displaying inline errors. On successful registration, the user is redirected to the home page. Includes options for signing up with GitHub or Google and links to login, terms, and privacy policies.
+ *
+ * @remark The form disables submission and alternative sign-up buttons while a registration request is pending, and displays an error alert if registration fails.
+ */
 export function SignUpForm({
   className,
   ...props

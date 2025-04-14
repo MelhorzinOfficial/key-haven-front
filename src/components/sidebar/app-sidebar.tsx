@@ -34,6 +34,11 @@ const data = {
   ],
 };
 
+/**
+ * Renders the main application sidebar with navigation, header, and user sections.
+ *
+ * The sidebar is collapsible by icon and includes a header, main navigation, user area, and a sidebar rail.
+ */
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
