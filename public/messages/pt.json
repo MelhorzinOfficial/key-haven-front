@@ -1,0 +1,47 @@
+{
+  "language": {
+    "en": "Inglês",
+    "pt": "Português"
+  },
+  "sign-in": {
+    "create": "Criar conta",
+    "email": "E-mail",
+    "password": "Senha",
+    "forgot_password": "Esqueceu a senha?",
+    "login": "Entrar",
+    "register": "Registrar",
+    "no_account": "Não tem uma conta?",
+    "github": "Entrar com Github",
+    "google": "Entrar com Google",
+    "terms_advice": "Ao continuar, você concorda com nossos",
+    "terms": "Termos de Serviço",
+    "privacy": "Política de Privacidade",
+    "or_continue_with": "Ou continuar com",
+    "call_to_action": "Registre-se para começar a usar o KeyHaven",
+    "and": "e",
+    "loading": "Carregando...",
+    "generic_error": "Ocorreu um erro. Tente novamente mais tarde."
+  },
+  "sign-up": {
+    "create_account": "Criar uma conta",
+    "description": "Inscreva-se para começar a usar o KeyHaven",
+    "confirm_password": "Confirmar Senha",
+    "already_have_account": "Já tem uma conta?",
+    "signup_advice": "Ao continuar, você concorda com nossos",
+    "name": "Nome",
+    "github": "Inscrever-se com Github",
+    "google": "Inscrever-se com Google",
+    "signin": "Entrar",
+    "mismatch": "As senhas não coincidem",
+    "privacy": "Política de Privacidade",
+    "email": "E-mail",
+    "password": "Senha",
+    "login": "Entrar",
+    "register": "Registrar-se",
+    "or_continue_with": "Ou continuar com",
+    "terms": "Termos de Serviço",
+    "and": "e",
+    "terms_advice": "Ao continuar, você concorda com nossos",
+    "loading": "Carregando..."
+  }
+}
